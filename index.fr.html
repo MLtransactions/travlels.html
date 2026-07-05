@@ -10,8 +10,9 @@
     *{box-sizing:border-box;} html,body{height:100%} body{margin:0;font-family:"Assistant","Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
     .site{max-width:980px;margin:28px auto;background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(10,20,40,0.08);} 
     .hero{background:linear-gradient(135deg,var(--primary),#294563);color:#fff;text-align:center;padding:48px 24px;position:relative;}
-    .lang-select{position:absolute;left:18px;top:18px;display:flex;gap:8px;}
+    .lang-select{position:absolute;left:18px;top:18px;display:flex;gap:8px;flex-wrap:wrap;}
     .lang-btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:6px 10px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+    .lang-btn.selected{background:rgba(255,255,255,0.18);}
     .highlight{display:inline-block;margin-top:14px;background:rgba(214,158,46,0.12);border:2px solid var(--accent);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;}
     main{padding:28px;} h2{color:var(--primary);text-align:center;margin:28px 0;font-size:1.6rem;border-bottom:3px solid rgba(43,108,176,0.12);padding-bottom:10px;}
     .tour{background:#fff;border:1px solid #e6edf6;border-radius:10px;margin:18px 0;overflow:hidden;} .tour .header{background:var(--primary);color:#fff;padding:14px 18px;font-weight:700;display:flex;align-items:center;gap:12px;}
@@ -29,9 +30,11 @@
   <div class="site" role="document">
     <header class="hero" role="banner" aria-labelledby="site-title">
       <nav class="lang-select" role="navigation" aria-label="Langues">
-        <a class="lang-btn" href="index.html" aria-label="עברית">🇮🇱 עברית</a>
-        <a class="lang-btn" href="index.en.html" aria-label="English">🇬🇧 English</a>
-        <a class="lang-btn" href="index.fr.html" aria-label="Français">🇫🇷 Français</a>
+        <a class="lang-btn" href="index.html" data-lang="he">עברית</a>
+        <a class="lang-btn" href="index.en.html" data-lang="en">English</a>
+        <a class="lang-btn" href="index.fr.html" data-lang="fr">Français</a>
+        <a class="lang-btn" href="index.ru.html" data-lang="ru">Русский</a>
+        <a class="lang-btn" href="index.es.html" data-lang="es">Español</a>
       </nav>
       <h1 id="site-title">✨ Voyages spirituels inoubliables en Terre Sainte ✨</h1>
       <p>Une expérience puissante qui restera dans votre cœur — connexion, prière et inspiration sur les lieux saints.</p>
@@ -39,91 +42,3 @@
     </header>
 
     <main>
-      <section class="vip" aria-labelledby="vip-title">
-        <div id="vip-title" class="title">👑 Service VIP pour petits groupes (jusqu'à 3 participants)</div>
-        <p>Surclassement VIP avec attention personnelle, horaires flexibles et grand soin des détails.</p>
-      </section>
-
-      <p style="text-align:center;color:var(--primary);font-weight:600;margin:6px 18px 20px;">
-        Un guide expérimenté, itinéraires adaptés et assistance complète tout au long du voyage.
-      </p>
-
-      <h2>🗺️ Choisissez votre itinéraire</h2>
-
-      <!-- North -->
-      <article class="tour" aria-labelledby="north-title">
-        <div class="header" id="north-title">⛰️ Itinéraire 1 : Galilée & Safed – Safed, Meron et Tibériade</div>
-        <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="Safed et Tiberias" loading="lazy"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
-          <div class="step">
-            <div class="title">🌅 Départ et préparation spirituelle</div>
-            <ul class="features-list">
-              <li>Rassemblement à un lieu pratique, paroles d'ouverture, chants et prières en chemin.</li>
-            </ul>
-          </div>
-
-          <div class="step">
-            <div class="title">📜 Vieille ville de Safed & Meron</div>
-            <ul class="features-list">
-              <li><strong>Safed — Ari et les kabbalistes :</strong> promenade dans les ruelles, prière et explication sur les racines de la Kabbale.</li>
-              <li><strong>Meron — Rabbi Shimon bar Yochai :</strong> arrêt et prière au tombeau de Rabbi Shimon.</li>
-            </ul>
-          </div>
-
-          <div class="step">
-            <div class="title">🌊 Tibériade et tombeaux</div>
-            <ul class="features-list">
-              <li><strong>Tombeau du Ramchal (R. Moshe Chaim Luzzatto) :</strong> visite et prière dans un lieu émouvant.</li>
-              <li>Visites supplémentaires selon l'itinéraire et possibilités de demandes et bénédictions personnelles.</li>
-            </ul>
-          </div>
-
-          <div class="step">
-            <div class="title">🥩 Repas de clôture</div>
-            <ul class="features-list">
-              <li>Un repas somptueux à Netanya ou dans un lieu convenu pour le groupe.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- South -->
-      <article class="tour" aria-labelledby="south-title">
-        <div class="header" id="south-title">☀️ Itinéraire 2 : Sud — Baba Sali, Rav Yoram Abergel et repas à Ashdod</div>
-        <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="Sud et Ashdod" loading="lazy"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
-          <div class="step">
-            <div class="title">🌅 Départ vers le sud</div>
-            <ul class="features-list">
-              <li>Trajet agréable avec récits sur les tzadikim et préparation spirituelle.</li>
-            </ul>
-          </div>
-
-          <div class="step">
-            <div class="title">🕌 Visites de tombeaux du sud</div>
-            <ul class="features-list">
-              <li><strong>Baba Sali — Rabbi Yisrael Abuhatzeira :</strong> visite et bénédiction au site sacré.</li>
-              <li><strong>Rav Yoram Abergel :</strong> prière et demandes pour santé et réussite.</li>
-            </ul>
-          </div>
-
-          <div class="step">
-            <div class="title">🍽️ Repas festif à Ashdod</div>
-            <ul class="features-list">
-              <li>Repas commun, chants de l'âme et partage des expériences du jour.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- Jerusalem -->
-      <article class="tour" aria-labelledby="jerusalem-title">
-        <div class="header" id="jerusalem-title">🏰 Itinéraire 3 : Jérusalem — Le Mur Occidental et les tzadikim de Jérusalem</div>
-        <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="Jérusalem" loading="lazy"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
-          <div class="step">
-            <div class="title">🕌 Le Mur Occidental</div>
-            <ul class="features-list">
