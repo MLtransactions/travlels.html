@@ -1,31 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>מסעות רוחניים בארץ הקודש</title>
-
-  <!-- גופן מותאם לעברית (אם אינטרנט זמין) -->
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    :root{
-      --primary:#1a365d;
-      --secondary:#2b6cb0;
-      --accent:#d69e2e;
-      --bg:#f7fafc;
-      --text:#2d3748;
-      --card:#ffffff;
+    :root {
+      --primary: #1a365d;
+      --secondary: #2b6cb0;
+      --accent: #d69e2e;
+      --bg: #f7fafc;
+      --text: #2d3748;
+      --card: #ffffff;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
+    * { box-sizing: border-box; }
+    html,body { height:100%; }
+    body {
       margin:0;
-      font-family:"Assistant", "Segoe UI", Tahoma, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      font-family: "Assistant", "Segoe UI", Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height:1.6;
     }
 
@@ -38,17 +33,17 @@
       box-shadow:0 8px 30px rgba(10,20,40,0.08);
     }
 
-    /* Header / Hero */
-    .hero{
-      background:linear-gradient(135deg,var(--primary),#294563);
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg,var(--primary),#294563);
       color:#fff;
       text-align:center;
       padding:48px 24px;
     }
-    .hero h1{font-size:2.2rem;margin-bottom:8px}
-    .hero p{margin:0 auto 12px;max-width:820px;color:rgba(255,255,255,0.92)}
+    .hero h1 { font-size:2.2rem; margin-bottom:8px; }
+    .hero p { margin:0 auto 12px; max-width:820px; color:rgba(255,255,255,0.94); }
 
-    .highlight{
+    .highlight {
       display:inline-block;
       margin-top:14px;
       background:rgba(214,158,46,0.12);
@@ -59,9 +54,9 @@
       font-weight:600;
     }
 
-    main{padding:28px}
+    main { padding:28px; }
 
-    h2{
+    h2 {
       color:var(--primary);
       text-align:center;
       margin:28px 0;
@@ -77,7 +72,7 @@
       margin:18px 0;
       overflow:hidden;
     }
-    .tour .header{
+    .tour .header {
       background:var(--primary);
       color:#fff;
       padding:14px 18px;
@@ -86,9 +81,9 @@
       align-items:center;
       gap:12px;
     }
-    .tour .body{padding:18px}
+    .tour .body { padding:18px; }
 
-    .route-img{
+    .route-img {
       width:100%;
       height:220px;
       object-fit:cover;
@@ -96,28 +91,24 @@
       display:block;
       margin-bottom:14px;
       background:#cbd5e0;
-      loading:lazy;
     }
 
-    .step{
+    .step {
       background:#f8fafc;
       border:1px solid #edf2f7;
       padding:12px;
       border-radius:8px;
       margin-bottom:12px;
     }
-    .step .title{color:var(--secondary);font-weight:700;margin-bottom:8px}
-    ul.features-list{
-      list-style:none;
-      padding-right:4px;
-      margin:0;
-    }
-    ul.features-list li{
+    .step .title { color:var(--secondary); font-weight:700; margin-bottom:8px; }
+
+    ul.features-list { list-style:none; padding-right:4px; margin:0; }
+    ul.features-list li {
       padding-right:24px;
       margin-bottom:8px;
       position:relative;
     }
-    ul.features-list li::before{
+    ul.features-list li::before {
       content:"✦";
       position:absolute;
       right:0;
@@ -125,11 +116,10 @@
       font-weight:700;
     }
 
-    .features-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
-    .feature{background:#edf2f7;padding:12px;border-radius:8px}
+    .features-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-top:8px; }
+    .feature { background:#edf2f7; padding:12px; border-radius:8px; }
 
-    /* VIP box */
-    .vip{
+    .vip {
       background:#fffaf0;
       border-right:5px solid var(--accent);
       padding:18px;
@@ -137,17 +127,16 @@
       border-radius:8px;
       color:#6b4b14;
     }
-    .vip .title{font-weight:700;margin-bottom:6px}
+    .vip .title { font-weight:700; margin-bottom:6px; }
 
-    /* Footer / Contact */
-    footer{
+    footer {
       background:var(--primary);
       color:#fff;
       text-align:center;
       padding:34px 18px;
       margin-top:18px;
     }
-    .phone{
+    .phone {
       font-size:1.6rem;
       font-weight:700;
       margin:8px 0;
@@ -156,7 +145,7 @@
       justify-content:center;
       gap:10px;
     }
-    .btn-call{
+    .btn-call {
       display:inline-block;
       margin-top:12px;
       background:var(--accent);
@@ -168,126 +157,125 @@
       box-shadow:0 6px 18px rgba(0,0,0,0.12);
     }
 
-    /* Responsive */
-    @media (min-width:720px){
-      .features-grid{grid-template-columns:repeat(2,1fr)}
-      .route-img{height:260px}
+    @media (min-width:720px) {
+      .features-grid { grid-template-columns:repeat(2,1fr); }
+      .route-img { height:260px; }
     }
   </style>
 </head>
 <body>
   <div class="site" role="document">
+
     <header class="hero" role="banner" aria-labelledby="site-title">
       <h1 id="site-title">✨ מסעות רוחניים בלתי נשכחים בארץ הקודש ✨</h1>
-      <p>חוויה עוצמתית שתישאר בליבכם לעד — חיבור עמוק, תפילות וישועות במקומות הקדושים ביותר.</p>
-      <div class="highlight" aria-hidden="false">הטיולים מיועדים לאורחים מחו"ל ולמטיילים המחפשים חוויה רוחנית איכותית ומסודרת</div>
+      <p>חוויה עוצמתית שתישאר בליבכם — חיבור, תפילה והשראה במקומות הקדושים.</p>
+      <div class="highlight">הטיולים מיועדים לאורחים ולמבקרים המעוניינים בחוויה רוחנית מסודרת ומעמיקה</div>
     </header>
 
     <main>
       <section class="vip" aria-labelledby="vip-title">
-        <div id="vip-title" class="title">👑 שירות VIP ייחודי לקבוצות קטנות (עד 3 משתתפים)</div>
-        <p>קבוצה קטנה? אפשרות לשדרוג ל-VIP הכולל יחס אישי, זמנים גמישים וחיבור עמוק למקומות המיוחדים.</p>
+        <div id="vip-title" class="title">👑 שירות VIP לקבוצות קטנות (עד 3 משתתפים)</div>
+        <p>שדרוג ל-VIP עם יחס אישי, לוחות זמנים גמישים והמון תשומת לב לפרטים.</p>
       </section>
 
       <p style="text-align:center;color:var(--primary);font-weight:600;margin:6px 18px 20px;">
-        נוסעים יחד לחוויה רוחנית בהכוונה של מלווה מנוסה שמכיר כל פינה וסיפור — מסלולים מותאמים, תפילות, ושיעורי עומק בדרכים.
+        מלווה מנוסה שמכיר את האתרים והסיפורים, מסלולים מותאמים ותמיכה מלאה לאורך כל המסע.
       </p>
 
       <h2>🗺️ בחר את מסלול המסע שלך</h2>
 
-      <!-- מסלול 1: צפון -->
+      <!-- צפון -->
       <article class="tour" aria-labelledby="north-title">
-        <div class="header" id="north-title">⛰️ מסלול 1: גליל וצפת — צדיקים וקברי צדיקים</div>
+        <div class="header" id="north-title">⛰️ מסלול 1: גליל וצפת – צפת, מירון וטבריה</div>
         <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="צפת וטבריה" />
+          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="צפת וטבריה">
           <div class="step">
-            <div class="title">🌅 שלב א': יציאה והכנה רוחנית</div>
+            <div class="title">🌅 יציאה והכנה רוחנית</div>
             <ul class="features-list">
-              <li>איסוף מסודר מהמרכז או מכל נקודה שתבחרו עם דברי תורה ושירים להעמקה רוחנית בדרך.</li>
+              <li>איסוף ממקום נוח, דברי פתיחה, שירים ותפילות בדרך.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">📜 שלב ב': צפת העתיקה ומירון</div>
+            <div class="title">📜 צפת העתיקה ומירון</div>
             <ul class="features-list">
-              <li><strong>ציון האר"י הקדוש</strong> — תפילה והתעלות במקומות לימוד וסודות הקבלה.</li>
-              <li><strong>ציוני המקובלים:</strong> ביקור באתרים היסטוריים, הליכה בסמטאות, ושיעור קצר על שורשי הקבלה בצפת.</li>
-              <li><strong>מירון — רשב"י:</strong> עצירה בכבוד לרבי שמעון בר יוחאי ותפילה במקום קדוש.</li>
+              <li><strong>צפת — האר"י והמקובלים:</strong> סיור בסמטאות, תפילה והסבר על שורשי הקבלה בצפת.</li>
+              <li><strong>מירון — רשב"י:</strong> עצירה ותפילה בציון רבי שמעון בר יוחאי.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">🌊 שלב ג': טבריה והציונים החשובים</div>
+            <div class="title">🌊 טבריה והציונים</div>
             <ul class="features-list">
-              <li>ביקור בציוני חכמי טבריה והנחת תפילות: ציון הרמח"ל (רבי משה חיים לוצאטו) ותפילה בלב של מקום מיוחד.</li>
-              <li>זמני חשיבה, בקשות וברכות אישיות אצל ציונים מקומיים.</li>
+              <li><strong>ציון הרמח"ל (רבי משה חיים לוצאטו):</strong> ביקור ותפילה במקום חשוב ומרגש בטבריה.</li>
+              <li>ביקור בציונים נוספים לפי מסלול והזדמנות לבקשות וברכות אישיות.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">🥩 שלב ד': סעודת מצווה</div>
+            <div class="title">🥩 סעודת סיום</div>
             <ul class="features-list">
-              <li>ארוחה כיד המלך בעיר נתניה או במקום מוסכם — סעודה חמה ומפנקת לסיום יום מלא חוויות.</li>
+              <li>ארוחה כיד המלך בעיר נתניה או במקום מוסכם לקבוצת המטיילים.</li>
             </ul>
           </div>
         </div>
       </article>
 
-      <!-- מסלול 2: דרום -->
+      <!-- דרום -->
       <article class="tour" aria-labelledby="south-title">
-        <div class="header" id="south-title">☀️ מסלול 2: דרום — הבבא סאלי וקדושי הדרום</div>
+        <div class="header" id="south-title">☀️ מסלול 2: דרום — הבבא סאלי, רב יורם אברג'ל וסעודה באשדוד</div>
         <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="דרום ואשדוד" />
+          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="דרום ואשדוד">
           <div class="step">
-            <div class="title">🌅 שלב א': יציאה דרומה</div>
+            <div class="title">🌅 יציאה לדרום</div>
             <ul class="features-list">
-              <li>נסיעה נעימה מלווה בסיפורי צדיקים, הכנה לתפילה ואווירה רוחנית לקראת הגעתנו לדרום.</li>
+              <li>נסיעה נעימה עם סיפורים על הצדיקים והתכוננות רוחנית.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">🕌 שלב ב': ציוני היקרים בדרום</div>
+            <div class="title">🕌 ביקורים בציונים בדרום</div>
             <ul class="features-list">
-              <li><strong>הבבא סאלי — רבי ישראל אבוחצירא:</strong> ביקור בציון וביקורת ברכות ונשיקה למקום של חסד וברכה.</li>
-              <li><strong>רב יורם אברג'ל:</strong> ביקור בציון ותפילה להצלחה ושמירה.</li>
+              <li><strong>הבבא סאלי — רבי ישראל אבוחצירא:</strong> ביקור בציון וברכה באתר הקדוש.</li>
+              <li><strong>רב יורם אברג'ל:</strong> תפילה בציון ובקשות לבריאות והצלחה.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">🐟 שלב ג': ארוחה באשדוד</div>
+            <div class="title">🍽️ סעודה חגיגית באשדוד</div>
             <ul class="features-list">
-              <li>נסיעה לאשדוד לסעודה חגיגית — ארוחה איכותית, ניגונים ושיתוף חוויות מהמסע.</li>
+              <li>ארוחה משותפת, שירי נשמה ושיתוף חוויות מהיום.</li>
             </ul>
           </div>
         </div>
       </article>
 
-      <!-- מסלול 3: ירושלים -->
+      <!-- ירושלים -->
       <article class="tour" aria-labelledby="jerusalem-title">
-        <div class="header" id="jerusalem-title">🏰 מסלול 3: ירושלים — הלב הרוחני של ישראל</div>
+        <div class="header" id="jerusalem-title">🏰 מסלול 3: ירושלים — הכותל וצדיקי ירושלים</div>
         <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="ירושלים" />
+          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="ירושלים">
           <div class="step">
-            <div class="title">🕌 שלב א': הכותל המערבי</div>
+            <div class="title">🕌 הכותל המערבי</div>
             <ul class="features-list">
-              <li>תפילה אישית ומלווה מול האבנים הקדושות של הכותל, עם הנחייה כיצד להתפלל ולהניח בקשות.</li>
+              <li>תפילה אישית ומלווה מול האבנים הקדושות עם הנחיות ותשומת לב רוחנית.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">📜 שלב ב': בעקבות צדיקי ירושלים</div>
+            <div class="title">📜 בעקבות צדיקי ירושלים</div>
             <ul class="features-list">
-              <li><strong>אור החיים הקדוש</strong> — עליה לציון ולהתחבר אל שורשי ההגות.</li>
-              <li><strong>מרן עובדיה יוסף זצ"ל</strong> — ביקור והסבר על חשיבות הציון והשפעתו.</li>
-              <li><strong>החלבן הקדוש</strong> — קביעה לביקור וגעגוע למורשת המקובלים.</li>
-              <li><strong>רבי ציון אבא שאול</strong> — תפילה והיזכרות בדורות האחרונים.</li>
+              <li><strong>האור החיים הקדוש</strong> — עליה לציון והסבר על מורשתו.</li>
+              <li><strong>מרן עובדיה יוסף זצ"ל</strong> — ביקור וציון.</li>
+              <li><strong>החלבן הקדוש</strong> — זכרון והתחברות למסורת המקובלים.</li>
+              <li><strong>רבי ציון אבא שאול</strong> (בן‑ציון אבא שאול) — ביקור ותפילה.</li>
             </ul>
           </div>
 
           <div class="step">
-            <div class="title">🍷 שלב ג': סעודה בירושלים</div>
+            <div class="title">🍷 סעודה מסכמת בירושלים</div>
             <ul class="features-list">
-              <li>סיום מרגש בארוחה כיד המלך בירושלים, שירי נפש, וברכות לסיום הטיול.</li>
+              <li>ארוחה חגיגית בירושלים, זמרי נשמה וברכות לסיום המסע.</li>
             </ul>
           </div>
         </div>
@@ -297,22 +285,12 @@
       <section class="features-grid" aria-labelledby="why-title">
         <div id="why-title" style="display:none">יתרונות</div>
 
-        <div class="feature">
-          <strong>הכרה עמוקה של השטח:</strong> המלווה נסע אישית פעמים רבות לכל המקומות ומכיר סיפורים, דרשות ומסלולים המוסיפים למשמעות החוויה.
-        </div>
-
-        <div class="feature">
-          <strong>ניהול ולוגיסטיקה מלא:</strong> אנחנו דואגים לאיסוף, להסעות, לזמני תפילה ולארוחות — אתם מתרכזים ברוח ולא בלוגיסטיקה.
-        </div>
-
-        <div class="feature">
-          <strong>מותאם לאורחים מחו"ל:</strong> קצב נוח, יחס אישי והסברים שיאפשרו חיבור עמוק גם למי שבא מרקע שונה.
-        </div>
-
-        <div class="feature">
-          <strong>אווירה משפחתית ורוחנית:</strong> מסלולים קטנים ומוקפדים לשילוב תפילות, לימוד וזמן אישי במקומות הקדושים.
-        </div>
+        <div class="feature"><strong>הכרה עמוקה של השטח:</strong> מלווה שמכיר היטב את המקומות, הסיפורים והמנהגים המקומיים.</div>
+        <div class="feature"><strong>ניהול ולוגיסטיקה מלא:</strong> איסוף, הסעות, זמני תפילה וארוחות – אתם מתרכזים בחוויה.</div>
+        <div class="feature"><strong>מותאם לאורחים מחו"ל:</strong> קצב נוח, יחס אישי ותמיכה בשפה ובצרכים מיוחדים.</div>
+        <div class="feature"><strong>אווירה רוחנית ומשפחתית:</strong> מסלולים קטנים ומשמעותיים לשילוב תפילה ולימוד.</div>
       </section>
+
     </main>
 
     <footer>
@@ -325,8 +303,9 @@
       </div>
 
       <a class="btn-call" href="tel:0523391287" aria-label="התקשרו עכשיו ל-0523391287">לחצו כאן לחיוג מהיר</a>
-      <p style="margin-top:12px;font-size:0.95rem;color:rgba(255,255,255,0.9)">ניתן להתאים מסלולים לפי בקשה — דיווחים על צרכים תזונתיים, אילוצי ניידות ושפה.</p>
+      <p style="margin-top:12px;font-size:0.95rem;color:rgba(255,255,255,0.9)">אפשר להתאים מסלולים לפי בקשה - צרכים תזונתיים, נגישות ושפה.</p>
     </footer>
+
   </div>
 </body>
 </html>
