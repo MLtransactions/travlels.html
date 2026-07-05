@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Духовные путешествия по Святой Земле</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#1a365d;--secondary:#2b6cb0;--accent:#d69e2e;--bg:#f7fafc;--text:#2d3748;--card:#ffffff;}
+    *{box-sizing:border-box;}html,body{height:100%}body{margin:0;font-family:"Assistant","Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    .site{max-width:980px;margin:28px auto;background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(10,20,40,0.08);} 
+    .hero{background:linear-gradient(135deg,var(--primary),#294563);color:#fff;text-align:center;padding:48px 24px;position:relative;}
+    .lang-select{position:absolute;left:18px;top:18px;display:flex;gap:8px;}
+    .lang-btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:6px 10px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+    .highlight{display:inline-block;margin-top:14px;background:rgba(214,158,46,0.12);border:2px solid var(--accent);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;}
+    main{padding:28px;} h2{color:var(--primary);text-align:center;margin:28px 0;font-size:1.6rem;border-bottom:3px solid rgba(43,108,176,0.12);padding-bottom:10px;}
+    .tour{background:#fff;border:1px solid #e6edf6;border-radius:10px;margin:18px 0;overflow:hidden;} .tour .header{background:var(--primary);color:#fff;padding:14px 18px;font-weight:700;display:flex;align-items:center;gap:12px;}
+    .route-img{width:100%;height:220px;object-fit:cover;border-radius:8px;display:block;margin-bottom:14px;background:#cbd5e0;}
+    .step{background:#f8fafc;border:1px solid #edf2f7;padding:12px;border-radius:8px;margin-bottom:12px;} .step .title{color:var(--secondary);font-weight:700;margin-bottom:8px;}
+    ul.features-list{list-style:none;padding-left:0;margin:0;} ul.features-list li{padding-left:24px;margin-bottom:8px;position:relative;} ul.features-list li::before{content:"✦";position:absolute;left:0;color:var(--accent);font-weight:700;}
+    .features-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px;} .feature{background:#edf2f7;padding:12px;border-radius:8px;}
+    .vip{background:#fffaf0;border-left:5px solid var(--accent);padding:18px;margin:18px;border-radius:8px;color:#6b4b14;} .vip .title{font-weight:700;margin-bottom:6px;}
+    footer{background:var(--primary);color:#fff;text-align:center;padding:34px 18px;margin-top:18px;} .phone{font-size:1.6rem;font-weight:700;margin:8px 0;display:flex;align-items:center;justify-content:center;gap:10px;}
+    .btn-call{display:inline-block;margin-top:12px;background:var(--accent);color:var(--primary);padding:12px 30px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 6px 12px rgba(10,20,40,0.12);} 
+    @media (min-width:720px){.features-grid{grid-template-columns:repeat(2,1fr);} .route-img{height:260px;}}
+  </style>
+</head>
+<body>
+  <div class="site" role="document">
+    <header class="hero" role="banner" aria-labelledby="site-title">
+      <nav class="lang-select" role="navigation" aria-label="Языки">
+        <a class="lang-btn" href="index.html" aria-label="עברית">🇮🇱 עברית</a>
+        <a class="lang-btn" href="index.en.html" aria-label="English">🇬🇧 English</a>
+        <a class="lang-btn" href="index.ru.html" aria-label="Русский">🇷🇺 Русский</a>
+      </nav>
+      <h1 id="site-title">✨ Незабываемые духовные путешествия по Святой Земле ✨</h1>
+      <p>Сильный опыт, который останется в вашем сердце — связь, молитва и вдохновение в святых местах.</p>
+      <div class="highlight">Туры для гостей и посетителей, желающих организованный и глубокий духовный опыт</div>
+    </header>
+
+    <main>
+      <section class="vip" aria-labelledby="vip-title">
+        <div id="vip-title" class="title">👑 VIP‑обслуживание для небольших групп (до 3 участников)</div>
+        <p>VIP‑апгрейд с персональным вниманием, гибким расписанием и заботой о каждой детали.</p>
+      </section>
+
+      <p style="text-align:center;color:var(--primary);font-weight:600;margin:6px 18px 20px;">
+        Опытный сопровождающий, знающий места и истории, адаптированные маршруты и полная поддержка на всём пути.
+      </p>
+
+      <h2>🗺️ Выберите маршрут</h2>
+
+      <!-- North -->
+      <article class="tour" aria-labelledby="north-title">
+        <div class="header" id="north-title">⛰️ Маршрут 1: Галилея и Цфат — Цфат, Мирон и Тверия</div>
+        <div class="body">
+          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="Safed and Tiberias" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
+          <div class="step">
+            <div class="title">🌅 Отправление и духовная подготовка</div>
+            <ul class="features-list">
+              <li>Сбор в удобном месте, вступительное слово, песни и молитвы в пути.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">📜 Старый Цфат и Мирон</div>
+            <ul class="features-list">
+              <li><strong>Цфат — Ари и каббалисты:</strong> прогулка по улочкам, молитва и рассказ о корнях каббалы.</li>
+              <li><strong>Мирон — Рабби Шимон бар Йохай:</strong> остановка и молитва у могилы.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🌊 Тверия и святые могилы</div>
+            <ul class="features-list">
+              <li><strong>Могила Рамхаль (рабби Моше Хаим Луццато):</strong> посещение и молитва в трогательном месте.</li>
+              <li>Посещения дополнительных могил по маршруту и возможность личных просьб и благословений.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🥩 Заключительный обед</div>
+            <ul class="features-list">
+              <li>Пышный обед в Нетании или в согласованном месте для группы.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- South -->
+      <article class="tour" aria-labelledby="south-title">
+        <div class="header" id="south-title">☀️ Маршрут 2: Юг — Баба Сали, рав Йорам Абергель и обед в Ашдоде</div>
+        <div class="body">
+          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="South and Ashdod" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
+          <div class="step">
+            <div class="title">🌅 Отправление на юг</div>
+            <ul class="features-list">
+              <li>Комфортная поездка с рассказами о праведниках и духовная подготовка.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🕌 Посещения могил юга</div>
+            <ul class="features-list">
+              <li><strong>Баба Сали — рабби Исраэль Абу-Хацира:</strong> посещение и благословение на святом месте.</li>
+              <li><strong>Рав Йорам Абергель:</strong> молитва с просьбами о здоровье и успехе.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🍽️ Праздничный обед в Ашдоде</div>
+            <ul class="features-list">
+              <li>Общий обед, духовные песни и обмен впечатлениями.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Jerusalem -->
+      <article class="tour" aria-labelledby="jerusalem-title">
+        <div class="header" id="jerusalem-title">🏰 Маршрут 3: Иерусалим — Западная стена и цадики Иерусалима</div>
+        <div class="body">
+          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="Jerusalem" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
+          <div class="step">
+            <div class="title">🕌 Западная стена</div>
+            <ul class="features-list">
+              <li>Личная молитва с вниманием и наставлениями у святых камней.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">📜 По местам цадиков Иерусалима</div>
+            <ul class="features-list">
+              <li><strong>ХаОр ХаХаим</strong> — подъем к могиле и рассказ о наследии.</li>
+              <li><strong>Маран Овадия Йосеф z"l</strong> — посещение и почтение памяти.</li>
+              <li><strong>Святой "Халбан"</strong> — воспоминание и связь с каббалистической традицией.</li>
+              <li><strong>Рабби Цион Абба Шауль</strong> — посещение и молитва.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🍷 Заключительный обед в Иерусалиме</div>
+            <ul class="features-list">
+              <li>Праздничный обед в Иерусалиме, певцы души и благословения в завершение пути.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <h2>💎 Почему выбрать нас?</h2>
+      <section class="features-grid" aria-labelledby="why-title">
+        <div id="why-title" style="display:none">Преимущества</div>
+        <div class="feature"><strong>Глубокое знание местности:</strong> сопровождающий, хорошо знающий места, истории и местные обычаи.</div>
+        <div class="feature"><strong>Полная логистика:</strong> сборы, трансферы, время молитв и питание — вы концентрируетесь на опыте.</div>
+        <div class="feature"><strong>Подходит для иностранных гостей:</strong> удобный темп, персональное внимание и поддержка по языку и особым потребностям.</div>
+        <div class="feature"><strong>Духовная, семейная атмосфера:</strong> небольшие значимые маршруты для сочетания молитвы и учения.</div>
+      </section>
+
+    </main>
+
+    <footer>
+      <h2 style="margin:0 0 6px">Мы обещаем духовное путешествие, которое изменит вашу жизнь</h2>
+      <p style="margin:0 0 14px">Для согласования маршрута, вопросов и регистрации — свяжитесь с нами напрямую :</p>
+      <div class="phone" aria-label="Телефон">
+        <span>📞</span>
+        <span>052-3391287</span>
+      </div>
+      <a class="btn-call" href="tel:0523391287" aria-label="Позвонить 0523391287">Нажмите здесь, чтобы позвонить</a>
+      <p style="margin-top:12px;font-size:0.95rem;color:rgba(255,255,255,0.9)">Маршруты можно адаптировать по запросу — питание, доступность и язык.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

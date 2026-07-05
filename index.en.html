@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spiritual Journeys in the Holy Land</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a365d;
+      --secondary: #2b6cb0;
+      --accent: #d69e2e;
+      --bg: #f7fafc;
+      --text: #2d3748;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html,body { height:100%; }
+    body {
+      margin:0;
+      font-family: "Assistant", "Segoe UI", Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
+    }
+    .site { max-width:980px; margin:28px auto; background:var(--card); border-radius:10px; overflow:hidden; box-shadow:0 8px 30px rgba(10,20,40,0.08); }
+    .hero { background: linear-gradient(135deg,var(--primary),#294563); color:#fff; text-align:center; padding:48px 24px; position:relative; }
+    .hero h1 { font-size:2.2rem; margin-bottom:8px; }
+    .hero p { margin:0 auto 12px; max-width:820px; color:rgba(255,255,255,0.94); }
+    .lang-select { position:absolute; left:18px; top:18px; display:flex; gap:8px; }
+    .lang-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:8px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
+    .highlight { display:inline-block; margin-top:14px; background:rgba(214,158,46,0.12); border:2px solid var(--accent); color:#fff; padding:10px 16px; border-radius:8px; font-weight:600; }
+    main { padding:28px; }
+    h2 { color:var(--primary); text-align:center; margin:28px 0; font-size:1.6rem; border-bottom:3px solid rgba(43,108,176,0.12); padding-bottom:10px; }
+    .tour { background:#fff; border:1px solid #e6edf6; border-radius:10px; margin:18px 0; overflow:hidden; }
+    .tour .header { background:var(--primary); color:#fff; padding:14px 18px; font-weight:700; display:flex; align-items:center; gap:12px; }
+    .tour .body { padding:18px; }
+    .route-img { width:100%; height:220px; object-fit:cover; border-radius:8px; display:block; margin-bottom:14px; background:#cbd5e0; }
+    .step { background:#f8fafc; border:1px solid #edf2f7; padding:12px; border-radius:8px; margin-bottom:12px; }
+    .step .title { color:var(--secondary); font-weight:700; margin-bottom:8px; }
+    ul.features-list { list-style:none; padding-left:0; margin:0; }
+    ul.features-list li { padding-left:24px; margin-bottom:8px; position:relative; }
+    ul.features-list li::before { content:"✦"; position:absolute; left:0; color:var(--accent); font-weight:700; }
+    .features-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-top:8px; }
+    .feature { background:#edf2f7; padding:12px; border-radius:8px; }
+    .vip { background:#fffaf0; border-left:5px solid var(--accent); padding:18px; margin:18px; border-radius:8px; color:#6b4b14; }
+    .vip .title { font-weight:700; margin-bottom:6px; }
+    footer { background:var(--primary); color:#fff; text-align:center; padding:34px 18px; margin-top:18px; }
+    .phone { font-size:1.6rem; font-weight:700; margin:8px 0; display:flex; align-items:center; justify-content:center; gap:10px; }
+    .btn-call { display:inline-block; margin-top:12px; background:var(--accent); color:var(--primary); padding:12px 30px; border-radius:999px; text-decoration:none; font-weight:700; box-shadow:0 6px 12px rgba(10,20,40,0.12); }
+    @media (min-width:720px) { .features-grid { grid-template-columns:repeat(2,1fr); } .route-img { height:260px; } }
+  </style>
+</head>
+<body>
+  <div class="site" role="document">
+
+    <header class="hero" role="banner" aria-labelledby="site-title">
+      <nav class="lang-select" role="navigation" aria-label="Languages">
+        <a class="lang-btn" href="index.html" aria-label="עברית">🇮🇱 עברית</a>
+        <a class="lang-btn" href="index.en.html" aria-label="English">🇬🇧 English</a>
+      </nav>
+
+      <h1 id="site-title">✨ Unforgettable Spiritual Journeys in the Holy Land ✨</h1>
+      <p>A powerful experience that will stay in your heart — connection, prayer and inspiration at holy sites.</p>
+      <div class="highlight">Tours for guests and visitors seeking a structured and deep spiritual experience</div>
+    </header>
+
+    <main>
+      <section class="vip" aria-labelledby="vip-title">
+        <div id="vip-title" class="title">👑 VIP service for small groups (up to 3 participants)</div>
+        <p>VIP upgrade with personal attention, flexible schedules and care for every detail.</p>
+      </section>
+
+      <p style="text-align:center;color:var(--primary);font-weight:600;margin:6px 18px 20px;">
+        An experienced guide who knows the sites and stories, tailored routes and full support throughout the journey.
+      </p>
+
+      <h2>🗺️ Choose your route</h2>
+
+      <!-- North -->
+      <article class="tour" aria-labelledby="north-title">
+        <div class="header" id="north-title">⛰️ Route 1: Galilee & Safed – Safed, Meron and Tiberias</div>
+        <div class="body">
+          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="Safed and Tiberias" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
+          <div class="step">
+            <div class="title">🌅 Departure & spiritual preparation</div>
+            <ul class="features-list">
+              <li>Picking up at a convenient location, opening words, songs and prayers on the way.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">📜 Safed Old City & Meron</div>
+            <ul class="features-list">
+              <li><strong>Safed — Kabbalists and the Ari:</strong> stroll the alleys, prayer and explanation about the roots of Kabbalah in Safed.</li>
+              <li><strong>Meron — Rabbi Shimon bar Yochai:</strong> stop and pray at the tomb of Rabbi Shimon.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🌊 Tiberias and tombs</div>
+            <ul class="features-list">
+              <li><strong>Rambach's tomb (R. Moshe Chaim Luzzatto):</strong> visit and pray at an important and moving site in Tiberias.</li>
+              <li>Visits to additional tombs as per route and opportunity for personal requests and blessings.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🥩 Closing feast</div>
+            <ul class="features-list">
+              <li>A royal meal in Netanya or an agreed location for the group.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- South -->
+      <article class="tour" aria-labelledby="south-title">
+        <div class="header" id="south-title">☀️ Route 2: South — Baba Sali, Rav Yoram Abergel and a feast in Ashdod</div>
+        <div class="body">
+          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="South and Ashdod" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
+          <div class="step">
+            <div class="title">🌅 Departure to the south</div>
+            <ul class="features-list">
+              <li>A pleasant drive with stories about the righteous and spiritual preparation.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🕌 Visits to southern tombs</div>
+            <ul class="features-list">
+              <li><strong>Baba Sali — Rabbi Yisrael Abuhatzeira:</strong> visit and blessings at the holy site.</li>
+              <li><strong>Rav Yoram Abergel:</strong> prayer at the tomb with requests for health and success.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🍽️ Festive meal in Ashdod</div>
+            <ul class="features-list">
+              <li>A communal meal, soulful songs and sharing the day's experiences.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Jerusalem -->
+      <article class="tour" aria-labelledby="jerusalem-title">
+        <div class="header" id="jerusalem-title">🏰 Route 3: Jerusalem — The Western Wall and Jerusalem's tzadikim</div>
+        <div class="body">
+          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="Jerusalem" loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200';" />
+          <div class="step">
+            <div class="title">🕌 The Western Wall</div>
+            <ul class="features-list">
+              <li>Personal prayer with guidance and spiritual attention at the holy stones.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">📜 Following Jerusalem's tzadikim</div>
+            <ul class="features-list">
+              <li><strong>HaOr HaChaim</strong> — visit to the tomb and explanation of his heritage.</li>
+              <li><strong>Marán Ovadia Yosef z"l</strong> — visit and commemoration.</li>
+              <li><strong>The Holy "Halban"</strong> — remembrance and connection to the kabbalistic tradition.</li>
+              <li><strong>Rabbi Tzion Abba Shaul</strong> — visit and prayer.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="title">🍷 Closing meal in Jerusalem</div>
+            <ul class="features-list">
+              <li>A festive meal in Jerusalem, soulful singers and blessings to finish the journey.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <h2>💎 Why choose us?</h2>
+      <section class="features-grid" aria-labelledby="why-title">
+        <div id="why-title" style="display:none">Advantages</div>
+
+        <div class="feature"><strong>Deep local knowledge:</strong> a guide familiar with the places, stories and local customs.</div>
+        <div class="feature"><strong>Full logistics management:</strong> pickups, transportation, prayer times and meals — you focus on the experience.</div>
+        <div class="feature"><strong>Suitable for international guests:</strong> comfortable pace, personal attention and support for language and special needs.</div>
+        <div class="feature"><strong>Spiritual, family atmosphere:</strong> small meaningful routes combining prayer and study.</div>
+      </section>
+
+    </main>
+
+    <footer>
+      <h2 style="margin:0 0 6px">We promise a spiritual journey that will change your life</h2>
+      <p style="margin:0 0 14px">To arrange a route, questions and registration — contact us directly:</p>
+
+      <div class="phone" aria-label="Phone number">
+        <span>📞</span>
+        <span>052-3391287</span>
+      </div>
+
+      <a class="btn-call" href="tel:0523391287" aria-label="Call now 0523391287">Click here for quick call</a>
+      <p style="margin-top:12px;font-size:0.95rem;color:rgba(255,255,255,0.9)">Routes can be customized on request — dietary needs, accessibility and language.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
