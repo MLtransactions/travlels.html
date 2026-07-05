@@ -31,8 +31,9 @@
     .hero h1 { font-size:2.2rem; margin-bottom:8px; }
     .hero p { margin:0 auto 12px; max-width:820px; color:rgba(255,255,255,0.94); }
 
-    .lang-select { position:absolute; left:18px; top:18px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); padding:6px 10px; border-radius:8px; color:#fff; }
-    .lang-select select { background:transparent; color:#fff; border:0; font-weight:700; direction:ltr; }
+    .lang-select { position:absolute; left:18px; top:18px; display:flex; gap:8px; }
+    .lang-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:8px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
+    .lang-btn:hover { background:rgba(255,255,255,0.12); }
 
     .highlight { display:inline-block; margin-top:14px; background:rgba(214,158,46,0.12); border:2px solid var(--accent); color:#fff; padding:10px 16px; border-radius:8px; font-weight:600; }
 
@@ -71,16 +72,10 @@
 
     <header class="hero" role="banner" aria-labelledby="site-title">
       <div class="lang-select" role="navigation" aria-label="בחר שפה">
-        <label for="lang" style="display:none">בחר שפה</label>
-        <select id="lang" aria-label="בחר שפה" onchange="translatePage(this.value)">
-          <option value="">בחירת שפה</option>
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="ru">Русский</option>
-          <option value="ar">العربية</option>
-          <option value="de">Deutsch</option>
-        </select>
+        <button class="lang-btn" onclick="translatePage('en')" aria-label="English">🇬🇧 English</button>
+        <button class="lang-btn" onclick="translatePage('fr')" aria-label="Français">🇫🇷 Français</button>
+        <button class="lang-btn" onclick="translatePage('ru')" aria-label="Русский">🇷🇺 Русский</button>
+        <button class="lang-btn" onclick="translatePage('es')" aria-label="Español">🇪🇸 Español</button>
       </div>
 
       <h1 id="site-title">✨ מסעות רוחניים בלתי נשכחים בארץ הקודש ✨</h1>
@@ -231,8 +226,6 @@
       // open Google Translate view for this page (many languages supported)
       var url = 'https://translate.google.com/translate?hl=&sl=auto&tl=' + encodeURIComponent(lang) + '&u=' + encodeURIComponent(u);
       window.open(url, '_blank');
-      // reset select to placeholder
-      document.getElementById('lang').value = '';
     }
 
     // Accessibility & image fallback: if any image fails, replace with inline SVG (handled via onerror on each img)
