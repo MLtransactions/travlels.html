@@ -32,7 +32,7 @@
     .hero p { margin:0 auto 12px; max-width:820px; color:rgba(255,255,255,0.94); }
 
     .lang-select { position:absolute; left:18px; top:18px; display:flex; gap:8px; }
-    .lang-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:8px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
+    .lang-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:8px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
     .lang-btn:hover { background:rgba(255,255,255,0.12); }
 
     .highlight { display:inline-block; margin-top:14px; background:rgba(214,158,46,0.12); border:2px solid var(--accent); color:#fff; padding:10px 16px; border-radius:8px; font-weight:600; }
@@ -71,12 +71,12 @@
   <div class="site" role="document">
 
     <header class="hero" role="banner" aria-labelledby="site-title">
-      <div class="lang-select" role="navigation" aria-label="בחר שפה">
-        <button class="lang-btn" onclick="translatePage('en')" aria-label="English">🇬🇧 English</button>
-        <button class="lang-btn" onclick="translatePage('fr')" aria-label="Français">🇫🇷 Français</button>
-        <button class="lang-btn" onclick="translatePage('ru')" aria-label="Русский">🇷🇺 Русский</button>
-        <button class="lang-btn" onclick="translatePage('es')" aria-label="Español">🇪🇸 Español</button>
-      </div>
+      <nav class="lang-select" role="navigation" aria-label="בחר שפה">
+        <a class="lang-btn" href="index.en.html" aria-label="English">🇬🇧 English</a>
+        <a class="lang-btn" href="index.fr.html" aria-label="Français">🇫🇷 Français</a>
+        <a class="lang-btn" href="index.ru.html" aria-label="Русский">🇷🇺 Русский</a>
+        <a class="lang-btn" href="index.es.html" aria-label="Español">🇪🇸 Español</a>
+      </nav>
 
       <h1 id="site-title">✨ מסעות רוחניים בלתי נשכחים בארץ הקודש ✨</h1>
       <p>חוויה עוצמתית שתישאר בליבכם — חיבור, תפילה והשראה במקומות הקדושים.</p>
@@ -99,7 +99,7 @@
       <article class="tour" aria-labelledby="north-title">
         <div class="header" id="north-title">⛰️ מסלול 1: גליל וצפת – צפת, מירון וטבריה</div>
         <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="צפת וטבריה" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;260&quot; viewBox=&quot;0 0 1200 260&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23cbd5e0&quot; /><text x=&quot;50%25&quot; y=&quot;50%25&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%236b7280&quot; font-family=&quot;Assistant, Arial&quot; font-size=&quot;28&quot;>תמונה לא זמינה</text></svg>';" />
+          <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1200" alt="צפת וטבריה" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1200 260&quot; preserveAspectRatio=&quot;xMidYMid slice&quot;><defs><linearGradient id=&quot;g1&quot; x1=&quot;0%25&quot; y1=&quot;0%25&quot; x2=&quot;100%25&quot; y2=&quot;100%25&quot;><stop offset=&quot;0%25&quot; stop-color=&quot;%23294e6b&quot; /><stop offset=&quot;100%25&quot; stop-color=&quot;%23cbd5e0&quot; /></linearGradient></defs><rect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;url(%23g1)&quot; /><g fill=&quot;#fff&quot; opacity=&quot;0.9&quot;><circle cx=&quot;200&quot; cy=&quot;80&quot; r=&quot;28&quot; fill=&quot;#ffd58a&quot; /><ellipse cx=&quot;600&quot; cy=&quot;220&quot; rx=&quot;700&quot; ry=&quot;80&quot; fill=&quot;%23002b36&quot; opacity=&quot;0.08&quot; /></g><text x=&quot;50%25&quot; y=&quot;52%25&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%236b7280&quot; font-family=&quot;Assistant, Arial&quot; font-size=&quot;28&quot;>תמונה לא זמינה</text></svg>';" />
           <div class="step">
             <div class="title">🌅 יציאה והכנה רוחנית</div>
             <ul class="features-list">
@@ -136,7 +136,7 @@
       <article class="tour" aria-labelledby="south-title">
         <div class="header" id="south-title">☀️ מסלול 2: דרום — הבבא סאלי, רב יורם אברג'ל וסעודה באשדוד</div>
         <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="דרום ואשדוד" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;260&quot; viewBox=&quot;0 0 1200 260&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23cbd5e0&quot; /><text x=&quot;50%25&quot; y=&quot;50%25&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%236b7280&quot; font-family=&quot;Assistant, Arial&quot; font-size=&quot;28&quot;>תמונה לא זמינה</text></svg>';" />
+          <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=1200" alt="דרום ואשדוד" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1200 260&quot; preserveAspectRatio=&quot;xMidYMid slice&quot;><defs><linearGradient id=&quot;g2&quot; x1=&quot;0%25&quot; y1=&quot;0%25&quot; x2=&quot;100%25&quot; y2=&quot;100%25&quot;><stop offset=&quot;0%25&quot; stop-color=&quot;%23294e6b&quot; /><stop offset=&quot;100%25&quot; stop-color=&quot;%23cbd5e0&quot; /></linearGradient></defs><rect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;url(%23g2)&quot; /><g fill=&quot;#fff&quot; opacity=&quot;0.9&quot;><circle cx=&quot;240&quot; cy=&quot;90&quot; r=&quot;24&quot; fill=&quot;#ffd58a&quot; /><ellipse cx=&quot;600&quot; cy=&quot;230&quot; rx=&quot;700&quot; ry=&quot;80&quot; fill=&quot;%23002b36&quot; opacity=&quot;0.08&quot; /></g><text x=&quot;50%25&quot; y=&quot;52%25&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%236b7280&quot; font-family=&quot;Assistant, Arial&quot; font-size=&quot;28&quot;>תמונה לא זמינה</text></svg>';" />
           <div class="step">
             <div class="title">🌅 יציאה לדרום</div>
             <ul class="features-list">
@@ -165,7 +165,7 @@
       <article class="tour" aria-labelledby="jerusalem-title">
         <div class="header" id="jerusalem-title">🏰 מסלול 3: ירושלים — הכותל וצדיקי ירושלים</div>
         <div class="body">
-          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="ירושלים" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;260&quot; viewBox=&quot;0 0 1200 260&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23cbd5e0&quot; /><text x=&quot;50%25&quot; y=&quot;50%25&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%236b7280&quot; font-family=&quot;Assistant, Arial&quot; font-size=&quot;28&quot;>תמונה לא זמינה</text></svg>';" />
+          <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200" alt="ירושלים" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1200 260&quot; preserveAspectRatio=&quot;xMidYMid slice&quot;><defs><linearGradient id=&quot;g3&quot; x1=&quot;0%25&quot; y1=&quot;0%25&quot; x2=&quot;100%25&quot; y2=&quot;100%25&quot;><stop offset=&quot;0%25&quot; stop-color=&quot;%23294e6b&quot; /><stop offset=&quot;100%25&quot; stop-color=&quot;%23cbd5e0&quot; /></linearGradient></defs><rect width=&quot;100%25&quot; height=&quot;100%25&quot; fill=&quot;url(%23g3)&quot; /><g fill=&quot;#fff&quot; opacity=&quot;0.9&quot;><circle cx=&quot;220&quot; cy=&quot;80&quot; r=&quot;26&quot; fill=&quot;#ffd58a&quot; /><ellipse cx=&quot;600&quot; cy=&quot;220&quot; rx=&quot;700&quot; ry=&quot;80&quot; fill=&quot;%23002b36&quot; opacity=&quot;0.08&quot; /></g><text x=&quot;50%25&quot; y=&quot;52%25&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; fill=&quot;%236b7280&quot; font-family=&quot;Assistant, Arial&quot; font-size=&quot;28&quot;>תמונה לא זמינה</text></svg>';" />
           <div class="step">
             <div class="title">🕌 הכותל המערבי</div>
             <ul class="features-list">
@@ -220,16 +220,7 @@
   </div>
 
   <script>
-    function translatePage(lang){
-      if(!lang) return;
-      var u = location.href;
-      // open Google Translate view for this page (many languages supported)
-      var url = 'https://translate.google.com/translate?hl=&sl=auto&tl=' + encodeURIComponent(lang) + '&u=' + encodeURIComponent(u);
-      window.open(url, '_blank');
-    }
-
-    // Accessibility & image fallback: if any image fails, replace with inline SVG (handled via onerror on each img)
-    // Additionally, make sure external images use https so mixed-content is not blocked.
+    // Language links now point to local static pages (index.en.html, index.fr.html, index.ru.html, index.es.html)
   </script>
 </body>
 </html>
