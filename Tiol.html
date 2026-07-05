@@ -1,0 +1,391 @@
+# Updating the HTML content to incorporate the new requested changes:
+# 1. Remove the text about "over 50 tours with groups" (clarified that he did it 50 times himself/with a friend).
+# 2. Add Tiberias update: include Ramchal (רבי משה חיים לוצאטו).
+# 3. Add South Tour Section (Baba Sali, Rav Yoram Abergel, dinner in Ashdod).
+# 4. Add Jerusalem Tour Section (Western Wall, Ohr HaChaim, Maran Ovadia Yosef, Chalban, Rabbi Ben Zion Abba Shaul, dinner in Jerusalem).
+# 5. Add phone number explicitly: 0523391287.
+
+updated_html = """<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מסעות רוחניים בארץ הקודש</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #d69e2e;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+            color: #e2e8f0;
+        }
+
+        .highlight-box {
+            background-color: rgba(214, 158, 46, 0.2);
+            border: 2px solid var(--accent-color);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 25px auto 0 auto;
+            max-width: 750px;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #fff;
+        }
+
+        /* VIP Badge Section */
+        .vip-section {
+            background-color: #fffaf0;
+            border-right: 5px solid var(--accent-color);
+            padding: 20px;
+            margin: 30px;
+            border-radius: 4px;
+        }
+
+        .vip-title {
+            color: #b7791f;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Content Sections */
+        .content-padding {
+            padding: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        /* Tour Tabs/Niches styling */
+        .tour-niche {
+            background: #fff;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .niche-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .niche-body {
+            padding: 25px;
+        }
+
+        .route-step {
+            margin-bottom: 20px;
+            background: #f8fafc;
+            border: 1px solid #edf2f7;
+            border-radius: 6px;
+            padding: 15px;
+        }
+
+        .route-title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .route-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background-color: #cbd5e0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-right: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 8px;
+        }
+
+        li::before {
+            content: "✦";
+            position: absolute;
+            right: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Features grid */
+        .features {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card strong {
+            color: var(--primary-color);
+        }
+
+        /* Footer / Contact */
+        .footer {
+            background: #1a365d;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #1a365d;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .phone-display {
+            font-size: 2rem;
+            color: #fff;
+            margin: 15px 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- כותרת ראשית -->
+        <div class="hero">
+            <h1>✨ מסעות רוחניים בלתי נשכחים בארץ הקודש ✨</h1>
+            <p>חוויה עוצמתית שתישאר בליבכם לעד – חיבור עמוק, תפילות וישועות במקומות הקדושים ביותר</p>
+            
+            <div class="highlight-box">
+                🎯 הטיולים מיועדים במיוחד לאנשים שמגיעים מחו"ל לארץ הקודש ורוצים לחוות חוויה רוחנית מרוממת, מזככת ובלתי נשכחת שלא תישכח לעולם!
+            </div>
+        </div>
+
+        <!-- אפשרות VIP לקבוצות קטנות -->
+        <div class="vip-section">
+            <div class="vip-title">👑 שירות VIP ייחודי לקבוצות קטנות (עד 3 משתתפים)</div>
+            <p><strong>מגיעים בהרכב מצומצם?</strong> במידה ואתם קבוצה של <strong>עד 3 אנשים</strong>, יש לכם אפשרות לשדרג את החוויה ולצאת לסיור ברכב VIP מפואר, מפנק ופרטי לכל אורך הדרך, להתאמה אישית מלאה ולנוחות מקסימלית.</p>
+        </div>
+
+        <div class="content-padding">
+            <p style="font-size: 1.15rem; text-align: center; margin-bottom: 30px; font-weight: 500; color: var(--primary-color);">
+                נוסעים יחד לחוויה רוחנית מדהימה בהכוונת מלווה מנוסה שמכיר כל פינה וסמטה באופן אישי, מתוך חיבור עמוק שנוצר לאחר שביקר בעצמו עשרות פעמים במקומות הקדושים הללו.
+            </p>
+
+            <h2>🗺️ בחר את מסלול המסע שלך</h2>
+
+            <!-- נישה 1: סיור צפון -->
+            <div class="tour-niche">
+                <div class="niche-header">⛰️ מסלול 1: גליל וצפון – מקובלי צפת ותנאי טבריה</div>
+                <div class="niche-body">
+                    <img class="route-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=800" alt="צפת וטבריה">
+                    
+                    <div class="route-step">
+                        <div class="route-title">🌅 שלב א': יוצאים לדרך ברוח טובה</div>
+                        <ul>
+                            <li>איסוף מסודר מהמרכז או מכל נקודה שתבחרו. נסיעה נוחה ומרוממת המלווה בדברי תורה ואווירה טובה.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">📜 שלב ב': צפת העתיקה ומירון</div>
+                        <ul>
+                            <li><strong>ציון האר"י הקדוש:</strong> פתיחת השערים ותפילה במקום שבו נכתבו סודות היקום.</li>
+                            <li><strong>האור החיים הקדוש והאלשיך הקדוש:</strong> תפילות לישועה והתעלות בלב הסמטאות העתיקות.</li>
+                            <li><strong>רשב"י במירון:</strong> עצירה אצל התנא האלוקי רבי שמעון בר יוחאי.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">🌊 שלב ג': יורדים לטבריה והסביבה</div>
+                        <ul>
+                            <li>עצירות אצל צדיקים פזורים בדרך והגעה לציוניהם של ענקי התורה בטבריה:</li>
+                            <li><strong>הנשר הגדול - הרמב"ם</strong>, <strong>השל"ה הקדוש</strong> (סגולה לדורות ישרים), <strong>רבי יוחנן בן זכאי</strong>, <strong>רבי עקיבא</strong>, ו**רבי מאיר בעל הנס**.</li>
+                            <li><strong>הרמח"ל הקדוש:</strong> תפילה מרגשת בציון רבי משה חיים לוצאטו.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">🥩 שלב ד': סעודת מצווה חגיגית בנתניה</div>
+                        <ul>
+                            <li>חתימת היום המופלא בעיר נתניה עם ארוחה בשרית כשרה, עשירה ומפנקת כיד המלך באווירה מגבשת ושמחה.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- נישה 2: סיור דרום -->
+            <div class="tour-niche">
+                <div class="niche-header">☀️ מסלול 2: דרום ונגב – בעקבות קדושת הבבא סאלי</div>
+                <div class="niche-body">
+                    <img class="route-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&q=80&w=800" alt="נתיבות ואשדוד">
+                    
+                    <div class="route-step">
+                        <div class="route-title">🌅 שלב א': איסוף ויציאה לדרום</div>
+                        <ul>
+                            <li>מתחילים את היום בנסיעה חלקה ונוחה דרומה, המוקדשת להכנה רוחנית, סיפורי צדיקים ושירי כיסופים.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">🕌 שלב ב': תפילות וישועות בנתיבות</div>
+                        <ul>
+                            <li><strong>הבבא סאלי הקדוש:</strong> הגעה לציון המאור הגדול, רבי ישראל אבוחצירא. מקום המסוגל לברכה, בריאות, אמונה וישועות מעל הטבע.</li>
+                            <li><strong>הרב יורם אברג'ל הקדוש:</strong> תפילה בציון של עמוד החסד והתורה בדורנו, לעורר רחמי שמיים, שלום בית והצלחה בכל מכל.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">🐟 שלב ג': ארוחה מפנקת ועשירה באשדוד</div>
+                        <ul>
+                            <li>לאחר התעלות הנפש והתפילות בדרום, נוסעים יחד לעיר החוף <strong>אשדוד</strong> לסעודה בשרית מפוארת, משביעה ומפנקת במיוחד לסיום מושלם של היום.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- נישה 3: סיור ירושלים -->
+            <div class="tour-niche">
+                <div class="niche-header">🏰 מסלול 3: ירושלים עיר הקודש – לב העולם הרוחני</div>
+                <div class="niche-body">
+                    <img class="route-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800" alt="ירושלים עיר הקודש">
+                    
+                    <div class="route-step">
+                        <div class="route-title">🕌 שלב א': שפוך חמתך אל מול אבני הכותל</div>
+                        <ul>
+                            <li>מתחילים את הסיור במקום שלא זזה ממנו שכינה מעולם – **הכותל המערבי**, לתפילה אישית מעומק הלב ובקשת רחמים.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">📜 שלב ב': בעקבות צדיקי ירושלים</div>
+                        <ul>
+                            <li><strong>האור החיים הקדוש:</strong> עלייה לציונו של רבנו חיים בן עטר בהר הזיתים, מקום הידוע ומסוגל להפליא לישועות גדולות.</li>
+                            <li><strong>מרן רבנו עובדיה יוסף:</strong> תפילה בציון פוסק הדור ומנהיג עם ישראל.</li>
+                            <li><strong>החלבן הקדוש:</strong> פקידת ציונו של המקובל האלוקי רבי חיים כהן זצ"ל.</li>
+                            <li><strong>רבי ציון אבא שאול:</strong> תפילה אצל ראש הישיבה וגדול התורה.</li>
+                        </ul>
+                    </div>
+
+                    <div class="route-step">
+                        <div class="route-title">🍷 שלב ג': ארוחה כיד המלך הטובה בירושלים</div>
+                        <ul>
+                            <li>סיום חגיגי, מפואר ומרגש בתוך **ירושלים עיר הקודש** עם ארוחה כיד המלך המשלבת בשרים איכותיים, שפע של סלטים ואווירה ירושלמית ייחודית ושמחה.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>💎 מה הופך את הטיול שלנו לייחודי?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <strong>✓ הכרה עמוקה של השטח:</strong> מלווה שנסע באופן אישי עשרות פעמים למקומות אלו וחי את ההיסטוריה והסגולות של כל אתר.
+                </div>
+                <div class="feature-card">
+                    <strong>✓ ראש שקט לחלוטין:</strong> אנחנו מנהלים את הכל – לוגיסטיקה, לוחות זמנים, הסעות וארוחות.
+                </div>
+                <div class="feature-card">
+                    <strong>✓ מותאם במיוחד לאורחים מחו"ל:</strong> קצב נכון, יחס חם והבנה עמוקה של הצרכים שלכם לחוויה בלתי נשכחת.
+                </div>
+            </div>
+        </div>
+
+        <!-- כפתור הנעה לפעולה ופרטי קשר -->
+        <div class="footer">
+            <h2>מבטיחים לכם מסע רוחני שישנה את חייכם</h2>
+            <p>לפרטים, תיאום מסלול והרשמה, צרו קשר ישירות עמנו:</p>
+            
+            <div class="phone-display">📞 052-3391287</div>
+            
+            <a href="tel:0523391287" class="btn-contact">לחצו כאן לחיוג מהיר</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+"""
+
+with open("spiritual_tours_complete.html", "w", encoding="utf-8") as f:
+    f.write(updated_html)
+print("Updated HTML with 3 niches generated successfully.")
